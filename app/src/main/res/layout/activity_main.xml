@@ -16,10 +16,14 @@
         android:layout_width="368dp"
         android:layout_height="33dp"
         android:layout_marginTop="10dp"
+        android:lineSpacingExtra="8sp"
         android:text="@string/enter_the_measurements"
         android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Title"
+        android:textSize="24sp"
+        android:typeface="monospace"
         android:visibility="visible"
+        app:fontFamily="serif"
         app:layout_constrainedWidth="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -119,8 +123,9 @@
         app:layout_constraintHorizontal_bias="0.974"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.195"
-        android:importantForAutofill="no" tools:targetApi="o" />
+        app:layout_constraintVertical_bias="0.201"
+        android:importantForAutofill="no"
+        />
 
     <TextView
         android:id="@+id/width"

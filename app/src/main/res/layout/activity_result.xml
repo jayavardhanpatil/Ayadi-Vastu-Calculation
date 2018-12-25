@@ -1,79 +1,682 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tableLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:scrollbars="vertical"
     tools:context=".ResultActivity">
 
-    <TableRow>
-        <TextView
-            android:layout_column="1"
-            android:text="@string/open"
-            android:padding="3dip" />
-        <TextView
-            android:text="@string/ctrl_o"
-            android:gravity="right"
-            android:padding="3dip" />
-    </TableRow>
 
-    <TableRow>
-        <TextView
-            android:layout_column="1"
-            android:text="@string/save"
-            android:padding="3dip" />
-        <TextView
-            android:text="@string/ctrl_s"
-            android:gravity="right"
-            android:padding="3dip" />
-    </TableRow>
+    <TextView
+        android:id="@+id/Length"
+        android:layout_width="105dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="30dp"
+        android:padding="8dp"
+        android:text="@string/length"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+        android:textStyle="bold" />
 
-    <TableRow>
-        <TextView
-            android:layout_column="1"
-            android:text="@string/save_as"
-            android:padding="3dip" />
-        <TextView
-            android:text="@string/ctrl_shift_s"
-            android:gravity="right"
-            android:padding="3dip" />
-    </TableRow>
+    <TextView
+        android:id="@+id/Feet"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/Length"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-30dp"
+        android:padding="5dp"
+        android:text="@string/feet"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
-    <View
-        android:layout_height="2dip"
-        android:background="#FF909090" />
+    <TextView
+        android:id="@+id/inches"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/Feet"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="0dp"
+        android:padding="5dp"
+        android:text="@string/inches"
+        android:textAlignment="center"
 
-    <TableRow>
-        <TextView
-            android:text="@string/x"
-            android:padding="3dip" />
-        <TextView
-            android:text="@string/hello"
-            android:padding="3dip" />
-    </TableRow>
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
-    <TableRow>
-        <TextView
-            android:text="@string/x"
-            android:padding="3dip" />
-        <TextView
-            android:text="@string/export"
-            android:padding="3dip" />
-        <TextView
-            android:text="@string/ctrl_e"
-            android:gravity="right"
-            android:padding="3dip" />
-    </TableRow>
+    <TextView
+        android:id="@+id/length_feet"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_alignBottom="@+id/Length"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="4dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="3dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="3dp"
+        android:text="@string/length_feet"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Menu"
+        android:textColor="@color/colorAccent"
+        android:typeface="serif"
+        android:visibility="invisible"
+        app:fontFamily="sans-serif-condensed" />
 
-    <View
-        android:layout_height="2dip"
-        android:background="#FF909090" />
+    <TextView
+        android:id="@+id/Length_Inches"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_alignBottom="@+id/Length"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="4dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="3dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="3dp"
+        android:text="@string/length_inches"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Menu"
+        android:textColor="@color/colorAccent"
+        android:typeface="serif"
+        android:visibility="invisible"
+        app:fontFamily="sans-serif-condensed" />
 
-    <TableRow>
-        <TextView
-            android:layout_column="1"
-            android:text="@string/quit"
-            android:padding="3dip" />
-    </TableRow>
+    <TextView
+        android:id="@+id/width"
+        android:layout_width="105dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="80dp"
+        android:padding="8dp"
+        android:text="@string/Width"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+        android:textStyle="bold" />
 
-</TableLayout>
+    <TextView
+        android:id="@+id/width_Feet"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="3dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="3dp"
+        android:text="@string/width_feet"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Menu"
+        android:textColor="@color/colorAccent"
+        android:typeface="serif"
+        android:visibility="invisible"
+        app:fontFamily="sans-serif-condensed" />
+
+    <TextView
+        android:id="@+id/width_Inches"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="3dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="3dp"
+        android:text="@string/width_inches"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Menu"
+        android:textColor="@color/colorAccent"
+        android:typeface="serif"
+        android:visibility="invisible"
+        app:fontFamily="sans-serif-condensed" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbarStyle="outsideInset">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="120dp"
+            android:layout_marginRight="10dp"
+            android:animationCache="true"
+            android:fadingEdge="none"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#3a3e42"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_column="1"
+                    android:padding="5dp"
+                    android:text="@string/table_view"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    android:textColor="@android:color/background_light"
+                    android:textStyle="bold|italic" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:animateLayoutChanges="true"
+                android:background="#bcc1c6"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:lineSpacingExtra="8sp"
+                    android:text="@string/_1"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Menu"
+                    android:textColor="@color/colorAccent"
+                    android:typeface="serif"
+                    app:fontFamily="sans-serif-condensed" />
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:gravity="center"
+                    android:text="@string/sq_in"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Menu"
+                    android:textColor="@color/colorAccent"
+                    android:typeface="serif"
+                    app:fontFamily="sans-serif-condensed" />
+
+                <TextView
+                    android:id="@+id/value_sq_in"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:gravity="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Menu"
+                    android:textColor="@color/colorAccent"
+                    android:typeface="serif"
+                    app:fontFamily="sans-serif-condensed" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:text="@string/_2"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Menu"
+                    android:textColor="@color/colorAccent"
+                    android:typeface="serif"
+                    app:fontFamily="sans-serif-condensed" />
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:gravity="center"
+                    android:text="@string/aaya"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Menu"
+                    android:textColor="@color/colorAccent"
+                    android:typeface="serif"
+                    app:fontFamily="sans-serif-condensed" />
+
+                <TextView
+                    android:id="@+id/value_aaya"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="3"
+                    android:gravity="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Menu"
+                    android:textColor="@color/colorAccent"
+                    android:typeface="serif"
+                    app:fontFamily="sans-serif-condensed" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#bcc1c6"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:text="@string/_3"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Menu"
+                    android:textColor="@color/colorAccent"
+                    android:typeface="serif"
+                    app:fontFamily="sans-serif-condensed" />
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:gravity="center"
+                    android:text="@string/dhan"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Menu"
+                    android:textColor="@color/colorAccent"
+                    android:typeface="serif"
+                    app:fontFamily="sans-serif-condensed" />
+
+                <TextView
+                    android:id="@+id/value_dhan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="3"
+                    android:gravity="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Menu"
+                    android:textColor="@color/colorAccent"
+                    android:typeface="serif"
+                    app:fontFamily="sans-serif-condensed" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Menu"
+                    android:textColor="@color/colorAccent"
+                    android:typeface="serif"
+                    app:fontFamily="sans-serif-condensed" />
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:gravity="center"
+                    android:text="@string/run"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Menu"
+                    android:textColor="@color/colorAccent"
+                    android:typeface="serif"
+                    app:fontFamily="sans-serif-condensed" />
+
+                <TextView
+                    android:id="@+id/value_run"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="3"
+                    android:gravity="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Menu"
+                    android:textColor="@color/colorAccent"
+                    android:typeface="serif"
+                    app:fontFamily="sans-serif-condensed" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#bcc1c6"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:text="@string/_4"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Menu"
+                    android:textColor="@color/colorAccent"
+                    android:typeface="serif"
+                    app:fontFamily="sans-serif-condensed" />
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:text="@string/tithi"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Menu"
+                    android:textColor="@color/colorAccent"
+                    android:typeface="serif"
+                    app:fontFamily="sans-serif-condensed" />
+
+                <TextView
+                    android:id="@+id/value_tithi"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="3"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Menu"
+                    android:textColor="@color/colorAccent"
+                    android:typeface="serif"
+                    app:fontFamily="sans-serif-condensed" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="4dp">
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:text="@string/_5"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Menu"
+                    android:textColor="@color/colorAccent"
+                    android:typeface="serif"
+                    app:fontFamily="sans-serif-condensed" />
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:gravity="center"
+                    android:text="@string/week"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Menu"
+                    android:textColor="@color/colorAccent"
+                    android:typeface="serif"
+                    app:fontFamily="sans-serif-condensed" />
+
+                <TextView
+                    android:id="@+id/value_week"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="3"
+                    android:gravity="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Menu"
+                    android:textColor="@color/colorAccent"
+                    android:typeface="serif"
+                    app:fontFamily="sans-serif-condensed" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#bcc1c6"
+                android:padding="4dp">
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:text="@string/_6"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Menu"
+                    android:textColor="@color/colorAccent"
+                    android:typeface="serif"
+                    app:fontFamily="sans-serif-condensed" />
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:gravity="center"
+                    android:text="@string/nakshatr"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Menu"
+                    android:textColor="@color/colorAccent"
+                    android:typeface="serif"
+                    app:fontFamily="sans-serif-condensed" />
+
+                <TextView
+                    android:id="@+id/value_nakshtra"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="3"
+                    android:gravity="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Menu"
+                    android:textColor="@color/colorAccent"
+                    android:typeface="serif"
+                    app:fontFamily="sans-serif-condensed" />
+
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="4dp">
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:text="@string/_7"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Menu"
+                    android:textColor="@color/colorAccent"
+                    android:typeface="serif"
+                    app:fontFamily="sans-serif-condensed" />
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:gravity="center"
+                    android:text="@string/yog"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Menu"
+                    android:textColor="@color/colorAccent"
+                    android:typeface="serif"
+                    app:fontFamily="sans-serif-condensed" />
+
+                <TextView
+                    android:id="@+id/value_yog"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="3"
+                    android:gravity="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Menu"
+                    android:textColor="@color/colorAccent"
+                    android:typeface="serif"
+                    app:fontFamily="sans-serif-condensed" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#bcc1c6"
+                android:padding="4dp">
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:text="@string/_8"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Menu"
+                    android:textColor="@color/colorAccent"
+                    android:typeface="serif"
+                    app:fontFamily="sans-serif-condensed" />
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:gravity="center"
+                    android:text="@string/karam"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Menu"
+                    android:textColor="@color/colorAccent"
+                    android:typeface="serif"
+                    app:fontFamily="sans-serif-condensed" />
+
+                <TextView
+                    android:id="@+id/value_karam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="3"
+                    android:gravity="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Menu"
+                    android:textColor="@color/colorAccent"
+                    android:typeface="serif"
+                    app:fontFamily="sans-serif-condensed" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="4dp">
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:text="@string/_9"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Menu"
+                    android:textColor="@color/colorAccent"
+                    android:typeface="serif"
+                    app:fontFamily="sans-serif-condensed" />
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:gravity="center"
+                    android:text="@string/aunsh"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Menu"
+                    android:textColor="@color/colorAccent"
+                    android:typeface="serif"
+                    app:fontFamily="sans-serif-condensed" />
+
+                <TextView
+                    android:id="@+id/value_aunsh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="3"
+                    android:gravity="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Menu"
+                    android:textColor="@color/colorAccent"
+                    android:typeface="serif"
+                    app:fontFamily="sans-serif-condensed" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#bcc1c6"
+                android:padding="4dp">
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:text="@string/_10"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Menu"
+                    android:textColor="@color/colorAccent"
+                    android:typeface="serif"
+                    app:fontFamily="sans-serif-condensed" />
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:gravity="center"
+                    android:text="@string/aayushy"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Menu"
+                    android:textColor="@color/colorAccent"
+                    android:typeface="serif"
+                    app:fontFamily="sans-serif-condensed" />
+
+                <TextView
+                    android:id="@+id/value_aayushy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="3"
+                    android:gravity="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Menu"
+                    android:textColor="@color/colorAccent"
+                    android:typeface="serif"
+                    app:fontFamily="sans-serif-condensed" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="4dp">
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:text="@string/_11"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Menu"
+                    android:textColor="@color/colorAccent"
+                    android:typeface="serif"
+                    app:fontFamily="sans-serif-condensed" />
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:gravity="center"
+                    android:text="@string/dikpal"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Menu"
+                    android:textColor="@color/colorAccent"
+                    android:typeface="serif"
+                    app:fontFamily="sans-serif-condensed" />
+
+                <TextView
+                    android:id="@+id/value_dikpal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="3"
+                    android:gravity="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Menu"
+                    android:textColor="@color/colorAccent"
+                    android:typeface="serif"
+                    app:fontFamily="sans-serif-condensed" />
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+</RelativeLayout>
